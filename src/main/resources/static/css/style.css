@@ -3,9 +3,9 @@
     src: url('../fonts/inter-regular.otf');
 }
 
+
 * {
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-    font-family: 'inter';
 }

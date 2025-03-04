@@ -23,4 +23,9 @@ public class TestController {
         ModelAndView mv = new ModelAndView("login/login");
         return mv;
     }
+
+    @GetMapping("/home")
+    public String homePage() {
+        return "home/index";
+    }
 }

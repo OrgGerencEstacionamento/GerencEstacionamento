@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'semiBold';
+    src: url('../../fonts/Inter-SemiBold.otf');
+}
+
+body {
+    background-image: url("../../images/car.png");
+    background-position: center  center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    font-family: 'semiBold';
+}
+
+#shadow {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.648);
+}
+
+.container_home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    z-index: 1;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 30px 150px 30px;
+    max-width: 500px;
+    text-align: center;
+    gap: 30px;
+}
+
+.container_home p {
+
+    line-height: 35px;
+}
+
+.container_home img {
+    border-radius: 100%;
+    width: 130px;
+}
+
+.container_home button {
+  
+    background-color: #EFB810;
+    padding: 10px;
+    width: 97%;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    border: 2px solid #EFB810;
+    border-radius: 5px;
+    color: white;
+    outline-color: 2px solid wheat;
+    transition: 0.3s all;
+}
+
+.container_home button:hover {
+    background-color: white;
+    color: #EFB810;
+    transform: scale(1.01);
+    width: 100%;
+}
+
+.container_home button:active {
+    transform: scale(1);
+}
