@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vagas de Estacionamento</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding-top: 70px;
+        }
+        .header {
+            width: 100%;
+            background-color: #1e1e1e;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .header .logo-container {
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 20px;
+        }
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-info span {
+            margin-left: 10px;
+        }
+        .header .logout a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .container {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        .parking-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .spot {
+            width: 80px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .occupied {
+            background-color: #ff4d4d;
+        }
+        .free {
+            background-color: #4caf50;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .legend div {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .legend span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .red { background: #ff4d4d; }
+        .green { background: #4caf50; }
+        .parking-grid .spot:nth-last-child(2),
+        .parking-grid .spot:last-child {
+            grid-column: span 1;
+            justify-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="user-info">
+            <span>&#128100; Nome</span>
+        </div>
+        <div class="logo-container">
+        </div>
+        <div class="logout">
+            <a href="#">&#128275; Log-out</a>
+        </div>
+    </div>
+    <div class="container">
+        <h3>Vagas do Estacionamento</h3>
+        <div class="parking-grid">
+            <div class="spot occupied">01</div>
+            <div class="spot free">02</div>
+            <div class="spot occupied">03</div>
+            <div class="spot free">04</div>
+            <div class="spot occupied">05</div>
+            <div class="spot free">06</div>
+            <div class="spot free">07</div>
+            <div class="spot occupied">08</div>
+            <div class="spot free">09</div>
+            <div class="spot occupied">10</div>
+            <div class="spot free">11</div>
+            <div class="spot occupied">12</div>
+            <div class="spot occupied">13</div>
+            <div class="spot free">14</div>
+            <div class="spot occupied">15</div>
+            <div class="spot free">16</div>
+            <div class="spot occupied">17</div>
+            <div class="spot free">18</div>
+            <div class="spot free">19</div>
+            <div class="spot occupied">20</div>
+            <div class="spot free">21</div>
+            <div class="spot occupied">22</div>
+            <div class="spot free">23</div>
+            <div class="spot occupied">24</div>
+            <div class="spot free">25</div>
+            <div class="spot free">26</div>
+            <div class="spot occupied">27</div>
+            <div class="spot free">28</div>
+            <div class="spot occupied">29</div>
+            <div class="spot free">30</div>
+            <div class="spot free">31</div>
+            <div class="spot occupied">32</div>
+            <div class="spot free">33</div>
+            <div class="spot occupied">34</div>
+            <div class="spot free">35</div>
+            <div class="spot occupied">36</div>
+            <div class="spot occupied">37</div>
+            <div class="spot free">38</div>
+            <div class="spot free">39</div>
+            <div class="spot free">40</div>
+            <div class="spot occupied">41</div>
+            <div class="spot free">42</div>
+            <div class="spot free">43</div>
+            <div class="spot occupied">44</div>
+            <div class="spot free">45</div>
+            <div class="spot occupied">46</div>
+            <div class="spot occupied">47</div>
+            <div class="spot occupied">48</div>
+            <div class="spot occupied">49</div>
+        </div>
+        <div class="legend">
+            <div><span class="red"></span> Ocupada</div>
+            <div><span class="green"></span> Livre</div>
+        </div>
+    </div>
+</body>
+</html>
