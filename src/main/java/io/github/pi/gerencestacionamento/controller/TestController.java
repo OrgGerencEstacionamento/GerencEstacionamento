@@ -17,4 +17,10 @@ public class TestController {
     public String register() {
         return "register/index";
     }
+
+    @GetMapping("/login")
+    public ModelAndView login() {
+        ModelAndView mv = new ModelAndView("login/login");
+        return mv;
+    }
 }

@@ -1,0 +1,193 @@
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, #3A3A3A, #282828);
+}
+
+a{
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    font-size: 35px;
+    color: #EFB810;
+    font-weight: bold;
+    max-width: 200px;
+}
+
+
+a > img {
+    width: 80px;
+}
+
+.container_login {
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto;
+    background-color: #3A3A3A;
+    border: 2px solid #65656580;
+    border-radius: 30px;
+    width: 35%;
+    min-width: 500px;
+    gap: 15px;
+    padding: 0px 0px 50px 0px;
+}
+
+@media(max-width: 580px) {
+    .login {
+        min-width: 300px;
+        width: 85%;
+        margin-top: 20px;
+    }   
+
+    .login >  div {
+        width: 85% !important;
+    }
+
+    .login button {
+        width: 85% !important;
+    }
+
+    body > a {
+        margin-left: 20px   ;
+    }
+
+    a > p {
+        display: none;
+    }
+}
+@media(max-height: 850px) {
+
+    .login {
+        max-height: 560px;    
+    }
+
+    .login > img {
+        width: 90px !important;
+        bottom: 30px !important;
+    }
+
+    a > img {
+        width: 70px;
+        margin-bottom: 10px;
+    }
+
+    .login > div > p {
+        font-size: 20px !important;
+    }
+
+    .login div input {
+        font-size: 20px !important;
+    }
+
+    .login button {
+        font-size: 22px !important;
+        margin-top: 10px !important;
+        padding: 15px !important;
+    }
+}
+
+
+.login > img {
+    border-radius: 100%;
+    width: 120px;
+    position: relative;
+    bottom: 50px;
+    margin-bottom: -12px;
+}
+
+.login > div {
+    width: 68%;
+}
+
+.login > div > p {
+    font-size: 22px;
+    margin-bottom: 6px;
+    color: #A8A8A8;
+    font-weight: bold;
+}
+
+.login div input {
+    width: 100%;
+    background-color: #3A3A3A;
+    border: 2px solid #65656580;
+    outline-color: white;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #A8A8A8;
+}
+
+.login .password div {
+    display: flex;    
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#eye {
+    position: absolute;
+    width: 35px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.login button {
+    width: 68%;
+    border: none;
+    border-radius: 5px;
+    padding: 17px;
+    cursor: pointer;
+    background-color: #28A745;
+    color: white;
+    font-size: 24px;
+    margin-top: 20px;
+    transition: all 0.2s;
+    outline-color: white;
+    font-weight: bold;
+}
+
+.login button:hover{ 
+    opacity: 90%;
+    transform: scale(1.01);
+}
+
+.login button:active {
+    transform: scale(1.0);
+}
+
+.container_login p {
+    color: #888; 
+    font-size: 14px; 
+    
+    margin-top: 10px; 
+}
+
+
+.container_login a {
+    color: MediumBlue; 
+    text-decoration: none;
+    font-size: 14px; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+}
+
+.container_login a:hover {
+    color: #555; 
+}
+
+.container_login p {
+    color: #888;
+    font-size: 14px;
+   
+    margin-top: 10px;
+    margin: 0; 
+    line-height: 1.5; 
+}
