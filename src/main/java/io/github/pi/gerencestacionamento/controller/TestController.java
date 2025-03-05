@@ -28,4 +28,11 @@ public class TestController {
     public String homePage() {
         return "home/index";
     }
+
+    @GetMapping("/vecancies")
+    public ModelAndView vecancies() {
+        ModelAndView mv = new ModelAndView("vecancies/index");
+
+        return mv;
+    }
 }
