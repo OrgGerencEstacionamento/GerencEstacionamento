@@ -6,19 +6,122 @@
 }
 
 body {
-    background-color: #121212;
-    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
     height: 100vh;
     padding-top: 70px;
+    background-color: #121212;
+    color: #ffffff;
 }
+
+.pop_up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 100vh;
+    width: 100%;
+}
+
+.content_popup {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 60px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #3A3A3A, #282828);
+    width: 50%;
+
+}
+
+.content_popup > h1 {
+    margin-bottom: 30px;
+}
+
+.daily_and_our {
+    display: flex;
+    justify-content: space-between;
+    font-size: 23px;
+    gap: 70px;
+}
+
+.content_popup h1 { 
+    color: #EFB810;
+    font-size: 26px;
+}
+
+
+.content_popup .daily, .our {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.daily .title {
+    display:  flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.daily .title div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    gap: 7px;
+}
+
+.daily .title #price p:nth-child(1) {
+    color: #8a8a8a;
+    text-decoration: line-through;
+}
+
+.daily .title div:nth-child(1) {
+    font-size: 24px;
+}
+
+.daily .title #price p:nth-child(2) {
+    color: rgb(0, 143, 0);
+}
+
+.daily .text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    letter-spacing: 1px;
+}
+
+.daily .atention h1 {
+    margin-bottom: 10px;
+}
+
+
+.content_popup button {
+    background-color: #28A745;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3 all;
+}
+
+.content_popup button:hover {
+}
+
 
 .header {
     width: 100%;
-    background-color: #1e1e1e;
+    background-color: #e0aaaa;
     padding: 25px;
     display: flex;
     justify-content: space-between;
