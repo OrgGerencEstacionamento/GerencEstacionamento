@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vagas de Estacionamento</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/css/vecancies/style.css">
+    <link rel="stylesheet" href="/css/vacancies/style.css">
 </head>
-
 <body>
-    <div class="pop_up">
-        <div class="content_popup">
+    <div onclick="showOccupation()" class="pop_up">
+        <div id="oi"></div>
+        <div onclick="" class="content_popup">
             <h1>Opções de ocupação</h1>
             <div class="daily_and_our">
                 <div class="daily">
@@ -27,7 +26,8 @@
                     </div>
                     <div class="text">
                         <p>Direito a alocar o veiculo por 1 dia</p>
-                        <p>Você tem o dirieiro de sair e entrar quando quiser, sua vaga não será ocpadapor outra pessoa</p>
+                        <p>Você tem o dirieiro de sair e entrar quando quiser, sua vaga não será ocpadapor outra pessoa
+                        </p>
                     </div>
                     <div class="atention">
                         <h1>Atenção</h1>
@@ -36,23 +36,26 @@
                     <button>Alugar</button>
                 </div>
                 <div class="our">
-                    <div>
+                    <div class="title">
                         <p>Hora</p>
                         <p>R$ 10</p>
                     </div>
                     <p>Direito a alocar o veiculo por 1 hora</p>
                     <div class="atention">
                         <h1>Atenção</h1>
-                        <p>Caso passe do horario reservado, será acrecsido 1 hora ao valor total e assim por diante.</p>
-                        <p>Caso você deixe o estabelecimento a sua vaga poderá ser alocada por outro veiculo.</p>
+                        <div>
+                            <p>Caso passe do horario reservado, será acrecsido 1 hora ao valor total e assim por diante.
+                            </p>
+                            <p>Caso você deixe o estabelecimento a sua vaga poderá ser alocada por outro veiculo.</p>
+                        </div>
                     </div>
                     <button>Alugar</button>
+                </div>
             </div>
-        </div>
-            
+
         </div>
     </div>
-    <div style="display: none;">
+    <div  class="vacancies">
         <div class="header">
             <div class="user-info">
                 <span>&#128100; Nome</span>
@@ -64,10 +67,12 @@
             </div>
         </div>
         <div class="container">
-            <h3>Vagas do Estacionamento</h3>
+            <div class="title">
+                <h3>Vagas do Estacionamento</h3>
+            </div>
             <div class="parking-grid">
                 <div class="spot occupied">01</div>
-                <div class="spot free">02</div>
+                <div onclick="showOccupation()" class="spot free">02</div>
                 <div class="spot occupied">03</div>
                 <div class="spot free">04</div>
                 <div class="spot occupied">05</div>
@@ -124,5 +129,5 @@
     </div>
 
 </body>
-
+<script src="/js/vacancies/index.js"></script>
 </html>

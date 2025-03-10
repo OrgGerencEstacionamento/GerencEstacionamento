@@ -31,7 +31,7 @@ public class TestController {
 
     @GetMapping("/vecancies")
     public ModelAndView vecancies() {
-        ModelAndView mv = new ModelAndView("vecancies/index");
+        ModelAndView mv = new ModelAndView("vacancies/index");
 
         return mv;
     }
