@@ -355,3 +355,18 @@ body {
     grid-column: span 1;
     justify-self: center;
 }
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 19px;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    color: red;
+    background: none;
+    border: none;
+}
+.close-button:hover {
+    color: darkred;
+}
