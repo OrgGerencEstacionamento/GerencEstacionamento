@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Data
 @Builder
 public class MovimentoVagasRequestDTO {
-    private long id;
+    private int id;
     private int fkUsuario;
     private int fkVaga;
     private LocalDate dataInclusao;
@@ -18,15 +18,15 @@ public class MovimentoVagasRequestDTO {
     private EstadoMovimentacaoEnum estadoMovimentacao;
     private float valorVaga;
 
-    public static MovimentoVagasRequestDTO fromMovimentoVagas(MovimentoVaga movimentoVaga) {
-        return MovimentoVagasRequestDTO.builder()
-                .id(movimentoVaga.getId())
-                .fkUsuario(movimentoVaga.getFkUsuario())
-                .fkVaga(movimentoVaga.getFkVaga())
-                .dataInclusao(movimentoVaga.getDataInclusao())
-                .dataAlteracao(movimentoVaga.getDataAlteracao())
-                .estadoMovimentacao(movimentoVaga.getEstadoMovimentacao())
-                .valorVaga(movimentoVaga.getValorVaga())
+    public static MovimentoVaga fromMovimentoVagas(MovimentoVagasRequestDTO movimentoVagasRequestDTO) {
+        return MovimentoVaga.builder()
+                .id(movimentoVagasRequestDTO.getId())
+                .fkUsuario(movimentoVagasRequestDTO.getFkUsuario())
+                .fkVaga(movimentoVagasRequestDTO.getFkVaga())
+                .dataInclusao(movimentoVagasRequestDTO.getDataInclusao())
+                .dataAlteracao(movimentoVagasRequestDTO.getDataAlteracao())
+                .estadoMovimentacao(movimentoVagasRequestDTO.getEstadoMovimentacao())
+                .valorVaga(movimentoVagasRequestDTO.getValorVaga())
                 .build();
     }
 }
