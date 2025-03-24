@@ -18,6 +18,12 @@ public class ClientController {
     @Autowired
     ClientService clientService;
 
+    @PostMapping("/login")
+    public ResponseEntity<ClientResponseDTO> login(@Valid @RequestBody ClientRequestDTO usuario) {
+        Optional<ClientResponseDTO> responseDTO = clientService.login(usuario.getEmail(), usuario.getSenha());
+        return responseDTO.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok().body(responseDTO.get());
+    }
+
     @GetMapping
     public ResponseEntity<List<ClientResponseDTO>> listAll() {
         return ResponseEntity.ok().body(clientService.findAll());
@@ -36,7 +42,7 @@ public class ClientController {
     };
 
     @PutMapping
-    public ResponseEntity<ClientResponseDTO> updateOne(@Valid @RequestBody ClientRequestDTO clientRequestDTO) {
+    public ResponseEntity<Void> updateOne(@Valid @RequestBody ClientRequestDTO clientRequestDTO) {
         boolean responseDTO = clientService.updateOne(ClientRequestDTO.fromUsuario(clientRequestDTO));
         return responseDTO ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
     };

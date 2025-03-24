@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Data
 @Builder
 public class MovimentoVagasResponseDTO {
-    private long id;
+    private int id;
     private int fkUsuario;
     private int fkVaga;
     private LocalDate dataInclusao;
@@ -26,6 +26,19 @@ public class MovimentoVagasResponseDTO {
                 .dataInclusao(movimentoVaga.getDataInclusao())
                 .dataAlteracao(movimentoVaga.getDataAlteracao())
                 .estadoMovimentacao(movimentoVaga.getEstadoMovimentacao())
+                .valorVaga(movimentoVaga.getValorVaga())
+                .build();
+    }
+
+    public static MovimentoVaga fromMovimentoVaga(MovimentoVagasResponseDTO movimentoVagasResponseDTO) {
+        return MovimentoVaga.builder()
+                .id(movimentoVagasResponseDTO.getId())
+                .fkUsuario(movimentoVagasResponseDTO.getFkUsuario())
+                .fkVaga(movimentoVagasResponseDTO.getFkVaga())
+                .dataInclusao(movimentoVagasResponseDTO.getDataInclusao())
+                .dataAlteracao(movimentoVagasResponseDTO.getDataAlteracao())
+                .estadoMovimentacao(movimentoVagasResponseDTO.getEstadoMovimentacao())
+                .valorVaga(movimentoVagasResponseDTO.getValorVaga())
                 .build();
     }
 }

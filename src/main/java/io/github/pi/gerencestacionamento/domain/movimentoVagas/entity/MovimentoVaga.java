@@ -16,29 +16,13 @@ import java.time.LocalDate;
 @EqualsAndHashCode(of="id")
 public class MovimentoVaga {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
     @NotNull(message = "FK Usuario deve ser preechida")
     private int fkUsuario;
     @NotNull(message = "FK Vaga deve ser preechida")
     private int fkVaga;
-    @NotNull(message = "A data de inclusão deve ser valída")
-    private LocalDate dataInclusao;
-    @NotNull(message = "A data de alteração deve ser valída")
-    private LocalDate dataAlteracao;
-    @NotNull @Enumerated(EnumType.ORDINAL)
-    private EstadoMovimentacaoEnum estadoMovimentacao;
-    @NotNull(message = "O valor deve ser preechido")
-    private float valorVaga;
+    private LocalDate dataInclusao = LocalDate.now();
+    private LocalDate dataAlteracao = LocalDate.now();
+    private EstadoMovimentacaoEnum estadoMovimentacao = EstadoMovimentacaoEnum.ATIVO;
+    private float valorVaga = 0;
 }
-
-/*
-    Id INT PRIMARY KEY AUTO_INCREMENT,
-    Fk_Usuario INT,
-    Fk_Vaga INT,
-    Data_Inclusao DATETIME,
-    Data_Alteracao DATETIME,
-    Estado_Movimento TINYINT,
-    ValorFinal DECIMAL(10,2),
-    FOREIGN KEY (Fk_Usuario) REFERENCES TB_USUARIOS(Id),
-    FOREIGN KEY (Fk_Vaga) REFERENCES TB_VAGAS(Id)
-*/
