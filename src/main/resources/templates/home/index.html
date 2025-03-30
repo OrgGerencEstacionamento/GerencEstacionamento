@@ -10,11 +10,12 @@
 </head>
 <body>
     <div id="shadow"></div>
-    <div class="container_home">
+    <form class="container_home" action="/vacancies" method="post">
         <img class="animate__animated animate__fadeInDown" src="/images/macaco.jpg" alt="">
         <p class="animate__animated animate__fadeInLeft">Encontre a vaga perfeita em poucos cliques</p>
-        <button class="animate__animated animate__fadeInUp" >Encontrar Vaga</button>
-    </div>
+        <input type="text" name="id" th:value="${id}" >
+        <button type="submit" class="animate__animated animate__fadeInUp" >Encontrar Vaga</button>
+    </form>
 </body>
 <script src="js/home/index.js" ></script>
 </html>

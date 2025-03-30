@@ -55,10 +55,10 @@
 
         </div>
     </div>
-    <div  class="vacancies">
+    <div class="vacancies" th:object="${usuario}" >
         <div class="header">
             <div class="user-info">
-                <span>&#128100; Nome</span>
+                <span th:text="'&#128100; ' + ${usuario.nome}"></span>
             </div>
             <div class="logo-container">
             </div>

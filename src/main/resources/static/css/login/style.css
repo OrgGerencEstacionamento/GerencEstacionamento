@@ -3,6 +3,7 @@ body {
     background: linear-gradient(45deg, #3A3A3A, #282828);
 }
 
+
 a{
     display: flex;
     align-items: center;
@@ -160,6 +161,10 @@ a > img {
 
 .login button:active {
     transform: scale(1.0);
+}
+
+#error{
+    color: red;
 }
 
 .container_login p {
